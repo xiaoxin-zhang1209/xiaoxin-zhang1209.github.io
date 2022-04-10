@@ -1,349 +1,157 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-04-10 18:34:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.1.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-几种排序算法的C语言实现-md" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/04/10/%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-md/" class="article-date">
-  <time class="dt-published" datetime="2022-04-10T08:26:18.000Z" itemprop="datePublished">2022-04-10</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/04/10/%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-md/">几种排序算法的C语言实现.md</a>
-    </h1>
-  
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/04/10/%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-md/" title="几种排序算法的C语言实现.md"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="几种排序算法的C语言实现.md"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/10/%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-md/" title="几种排序算法的C语言实现.md">几种排序算法的C语言实现.md</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-04-10T08:26:18.000Z" title="Created 2022-04-10 16:26:18">2022-04-10</time></span></div><div class="content">几种常用排序算法总结及代码实现
+注：本文排序算法的代码实现全部采取从小到大的方式进行排序
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="几种常用排序算法总结及代码实现"><a href="#几种常用排序算法总结及代码实现" class="headerlink" title="几种常用排序算法总结及代码实现"></a>几种常用排序算法总结及代码实现</h2><blockquote>
-<p>注：本文排序算法的代码实现<strong>全部采取从小到大的方式</strong>进行排序</p>
-</blockquote>
-<h2 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1. 冒泡排序"></a>1. 冒泡排序</h2><h6 id="冒泡排序（Bubble-Sort）就是一种交换排序，它的思想就是两个元素进行比较，如果是反序则交换，直到没有反序的元素为止。"><a href="#冒泡排序（Bubble-Sort）就是一种交换排序，它的思想就是两个元素进行比较，如果是反序则交换，直到没有反序的元素为止。" class="headerlink" title="冒泡排序（Bubble Sort）就是一种交换排序，它的思想就是两个元素进行比较，如果是反序则交换，直到没有反序的元素为止。"></a>冒泡排序（Bubble Sort）就是一种交换排序，它的思想就是两个元素进行比较，如果是反序则交换，直到没有反序的元素为止。</h6><h4 id="排序图示"><a href="#排序图示" class="headerlink" title="排序图示"></a>排序图示</h4><p><img src="https://img-blog.csdnimg.cn/20200722093447731.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="comment">//两个数进行交换的函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Swap</span><span class="params">(<span class="type">int</span> *num1, <span class="type">int</span> *num2)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> temp = *num1;</span><br><span class="line">    *num1 = *num2;</span><br><span class="line">    *num2 = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//冒泡排序的具体实现</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">bubbleSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len - <span class="number">1</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt;= len  - <span class="number">1</span>; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i] &lt; arr[j])</span><br><span class="line">            &#123;</span><br><span class="line">                Swap(&amp;arr[i], &amp;arr[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打印函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Print</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    <span class="comment">//求出数组的长度</span></span><br><span class="line">    <span class="type">int</span> len = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之前：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    bubbleSort(arr, len);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之后：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h4><blockquote>
-<p>排序之前：</p>
-<p>1 9 7 2 4 3 6 5 0 8</p>
-<p>排序之后：</p>
-<p>0 1 2 3 4 5 6 7 8 9</p>
-</blockquote>
-<hr>
-<h2 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2. 选择排序"></a>2. 选择排序</h2><h6 id="选择排序（Selection-Sort）的思想就是在一直的元素中找到最大（小）的值放在起始的位置，再从剩余的元素中找到最大（小）的元素放在刚刚找到的最值得后面，以此类推，直到所有的元素全部排序结束。"><a href="#选择排序（Selection-Sort）的思想就是在一直的元素中找到最大（小）的值放在起始的位置，再从剩余的元素中找到最大（小）的元素放在刚刚找到的最值得后面，以此类推，直到所有的元素全部排序结束。" class="headerlink" title="选择排序（Selection Sort）的思想就是在一直的元素中找到最大（小）的值放在起始的位置，再从剩余的元素中找到最大（小）的元素放在刚刚找到的最值得后面，以此类推，直到所有的元素全部排序结束。"></a>选择排序（Selection Sort）的思想就是在一直的元素中找到最大（小）的值放在起始的位置，再从剩余的元素中找到最大（小）的元素放在刚刚找到的最值得后面，以此类推，直到所有的元素全部排序结束。</h6><h4 id="排序图示-1"><a href="#排序图示-1" class="headerlink" title="排序图示"></a>排序图示</h4><p><img src="https://img-blog.csdnimg.cn/20200722093521206.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Swap</span><span class="params">(<span class="type">int</span> *num1, <span class="type">int</span> *num2)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> temp = *num1;</span><br><span class="line">    *num1 = *num2;</span><br><span class="line">    *num2 = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Print</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">SelectionSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len - <span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> min = i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; len; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[min] &gt; arr[j])</span><br><span class="line">            &#123;</span><br><span class="line">                min = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i != min)</span><br><span class="line">        &#123;</span><br><span class="line">            Swap(&amp;arr[i], &amp;arr[min]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    <span class="type">int</span> len = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之前：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    SelectionSort(arr, len);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之后：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>因为采用的示例和冒泡算法相同，且都是从小到大进行排序，故输出结果和冒泡排序相同，下同。</p>
-</blockquote>
-<hr>
-<h2 id="3-快速排序"><a href="#3-快速排序" class="headerlink" title="3. 快速排序"></a>3. 快速排序</h2><h6 id="a-快速排序-Quick-Sort-也被称为划分排序或分区排序，它是目前所有的内部排序方法中速度最快的一种，快速排序是对起泡排序的一种改进。"><a href="#a-快速排序-Quick-Sort-也被称为划分排序或分区排序，它是目前所有的内部排序方法中速度最快的一种，快速排序是对起泡排序的一种改进。" class="headerlink" title="a. 快速排序(Quick Sort)也被称为划分排序或分区排序，它是目前所有的内部排序方法中速度最快的一种，快速排序是对起泡排序的一种改进。"></a>a. 快速排序(Quick Sort)也被称为划分排序或分区排序，它是目前所有的内部排序方法中速度最快的一种，快速排序是对起泡排序的一种改进。</h6><h6 id="b-快速排序的思想是：选取一个基准数（一般取第一个数），将比基准数小的数放到基准数的前面，比基准数大的数交换到基准数的后面。经历一趟排序之后基准数左面都是比它小的数，右面都是比它大的数。对左右两个区间重复之前的操作，直到每个区间只有一个元素为止。"><a href="#b-快速排序的思想是：选取一个基准数（一般取第一个数），将比基准数小的数放到基准数的前面，比基准数大的数交换到基准数的后面。经历一趟排序之后基准数左面都是比它小的数，右面都是比它大的数。对左右两个区间重复之前的操作，直到每个区间只有一个元素为止。" class="headerlink" title="b. 快速排序的思想是：选取一个基准数（一般取第一个数），将比基准数小的数放到基准数的前面，比基准数大的数交换到基准数的后面。经历一趟排序之后基准数左面都是比它小的数，右面都是比它大的数。对左右两个区间重复之前的操作，直到每个区间只有一个元素为止。"></a>b. 快速排序的思想是：选取一个基准数（一般取第一个数），将比基准数小的数放到基准数的前面，比基准数大的数交换到基准数的后面。经历一趟排序之后基准数左面都是比它小的数，右面都是比它大的数。对左右两个区间重复之前的操作，直到每个区间只有一个元素为止。</h6><h4 id="排序图示-2"><a href="#排序图示-2" class="headerlink" title="排序图示"></a>排序图示</h4><p><img src="https://img-blog.csdnimg.cn/2020072209364614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="代码实现-2"><a href="#代码实现-2" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Print</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">QuickSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> start, <span class="type">int</span> end)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//这里的i和j表示初始的start和end</span></span><br><span class="line">    <span class="type">int</span> i = start;</span><br><span class="line">    <span class="type">int</span> j = end;</span><br><span class="line">    <span class="type">int</span> temp = arr[start];</span><br><span class="line">    <span class="keyword">if</span> (start &lt; end)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (start &lt; end)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//从右向左找比基准数小的元素</span></span><br><span class="line">            <span class="keyword">while</span> (start &lt; end &amp;&amp; arr[end] &gt;= temp)</span><br><span class="line">            &#123;</span><br><span class="line">                end--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; end)</span><br><span class="line">            &#123;</span><br><span class="line">                arr[start] = arr[end];</span><br><span class="line">                start++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//从左向右找比基准数大的元素</span></span><br><span class="line">            <span class="keyword">while</span> (start &lt; end &amp;&amp; arr[start] &lt;= temp)</span><br><span class="line">            &#123;</span><br><span class="line">                start++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; end)</span><br><span class="line">            &#123;</span><br><span class="line">                arr[end] = arr[start];</span><br><span class="line">                end--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//把基准数放到start和end重合的位置</span></span><br><span class="line">        arr[end] = temp;</span><br><span class="line">        <span class="comment">//下面两行代码使用了递归的思想</span></span><br><span class="line">        <span class="comment">//对左半部分快排</span></span><br><span class="line">        QuickSort(arr, i, end - <span class="number">1</span>);<span class="comment">//此处用初始的start即i</span></span><br><span class="line">        <span class="comment">//对右半部分进行快排</span></span><br><span class="line">        QuickSort(arr, end + <span class="number">1</span>,j);<span class="comment">//此处用初始的end即j</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    <span class="type">int</span> len = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之前：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    QuickSort(arr, <span class="number">0</span>, len - <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之后：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+1. 冒泡排序冒泡排序（Bubble Sort）就是一种交换排序，它的思想就是两个元素进行比较，如果是反序则交换，直到没有反序的元素为止。排序图示
+代码实现12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;stdio.h&gt;//两个数进行交换的函数void Swap(int *num1, int *num2)&#123;    int temp = *num1;    *num1 = *num2;    *num2 = temp;&#125;//冒泡排序的具体实现void bubbleSort(int arr[], int len)&#123;    for (int i = 0; i &lt; len - 1; ++i)    &#123;        for (int j = i + 1; j &lt;= len  - 1; ++j)        &#12 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/04/10/hello-world/" title="Hello World"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/10/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-04-10T07:42:04.056Z" title="Created 2022-04-10 15:42:04">2022-04-10</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
-<hr>
-<h2 id="4-插入排序"><a href="#4-插入排序" class="headerlink" title="4. 插入排序"></a>4. 插入排序</h2><h6 id="插入排序（Insertion-Sort-的思想就是将无需序列插入到有序序列中，从而能够得到一个新的、元素个数加1的有序序列。"><a href="#插入排序（Insertion-Sort-的思想就是将无需序列插入到有序序列中，从而能够得到一个新的、元素个数加1的有序序列。" class="headerlink" title="插入排序（Insertion Sort)的思想就是将无需序列插入到有序序列中，从而能够得到一个新的、元素个数加1的有序序列。"></a>插入排序（Insertion Sort)的思想就是将无需序列插入到有序序列中，从而能够得到一个新的、元素个数加1的有序序列。</h6><h6 id="排序图示-3"><a href="#排序图示-3" class="headerlink" title="排序图示"></a>排序图示</h6><p><img src="https://img-blog.csdnimg.cn/2020072209434058.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="代码实现-3"><a href="#代码实现-3" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Print</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">InsertionSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> j;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &lt; arr[i - <span class="number">1</span>])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> temp = arr[i];</span><br><span class="line">            <span class="keyword">for</span> (j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; temp &lt; arr[j]; j--)</span><br><span class="line">            &#123;</span><br><span class="line">                arr[j + <span class="number">1</span>] = arr[j];</span><br><span class="line">            &#125;</span><br><span class="line">            arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">10</span>] = &#123;<span class="number">1</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    <span class="type">int</span> len = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之前：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    InsertionSort(arr, len);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之后：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="5-希尔排序"><a href="#5-希尔排序" class="headerlink" title="5. 希尔排序"></a>5. 希尔排序</h2><h6 id="希尔排序（Shell-Sort）的思想是将待排序记录序列分成几个组，在每一组内分别进行直接插入排序，使得整个记录序列部分有序；重复此过程，直到所有记录都在同一组中，最后对所有的记录进行一次直接插入排序即可。"><a href="#希尔排序（Shell-Sort）的思想是将待排序记录序列分成几个组，在每一组内分别进行直接插入排序，使得整个记录序列部分有序；重复此过程，直到所有记录都在同一组中，最后对所有的记录进行一次直接插入排序即可。" class="headerlink" title="希尔排序（Shell Sort）的思想是将待排序记录序列分成几个组，在每一组内分别进行直接插入排序，使得整个记录序列部分有序；重复此过程，直到所有记录都在同一组中，最后对所有的记录进行一次直接插入排序即可。"></a>希尔排序（Shell Sort）的思想是将待排序记录序列分成几个组，在每一组内分别进行直接插入排序，使得整个记录序列部分有序；重复此过程，直到所有记录都在同一组中，最后对所有的记录进行一次直接插入排序即可。</h6><h4 id="排序图示-4"><a href="#排序图示-4" class="headerlink" title="排序图示"></a>排序图示</h4><p><img src="https://img-blog.csdnimg.cn/2020072209394418.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="代码实现-4"><a href="#代码实现-4" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Print</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">ShellSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> increment = len;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        increment = increment / <span class="number">3</span> + <span class="number">1</span>;<span class="comment">//增量序列</span></span><br><span class="line">        <span class="type">int</span> i, j, k;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; increment; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = i + increment; j &lt; len; j += increment)</span><br><span class="line">            &#123;</span><br><span class="line">                  <span class="keyword">if</span> (arr[j] &lt; arr[j - increment])</span><br><span class="line">                  &#123;</span><br><span class="line">                      <span class="type">int</span> temp = arr[j];</span><br><span class="line">                      <span class="keyword">for</span> (k = j - increment; k &gt;=<span class="number">0</span> &amp;&amp; temp &lt; arr[k] ; k -= increment)</span><br><span class="line">                      &#123;</span><br><span class="line">                          arr[k + increment] = arr[k];</span><br><span class="line">                      &#125;</span><br><span class="line">                      arr[k + increment] = temp;</span><br><span class="line">                  &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (increment &gt; <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    <span class="type">int</span> len = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之前：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    ShellSort(arr, len);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之后：\n&quot;</span>);</span><br><span class="line">    Print(arr, len);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="6-归并排序"><a href="#6-归并排序" class="headerlink" title="6.归并排序"></a>6.归并排序</h2><ul>
-<li>归并排序（Merging Sort）就是利用归并的思想，将两个有序序列合并成一个有序序列（C++里STL中的merge算法）。</li>
-<li>实现的方法：将长度为n的序列分成两个 n &#x2F; 2 的子序列，对这两个子序列再次采用归并排序（递归），直到两个序列都是有序的（要求同序）。再将两个子序列合并为一个即可（再次使用归并排序）。<h4 id="排序图示-5"><a href="#排序图示-5" class="headerlink" title="排序图示"></a>排序图示</h4><img src="https://img-blog.csdnimg.cn/20200722093719903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li>
-</ul>
-<h4 id="代码实现-5"><a href="#代码实现-5" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Print</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Merge</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> start, <span class="type">int</span> end, <span class="type">int</span> mid, <span class="type">int</span> temp[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> i_start = start;</span><br><span class="line">    <span class="type">int</span> i_end = mid;</span><br><span class="line">    <span class="type">int</span> j_start = mid +<span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> j_end = end;</span><br><span class="line">    <span class="type">int</span> length = <span class="number">0</span>;<span class="comment">//辅助空间的元素</span></span><br><span class="line">    <span class="comment">//合并有序序列</span></span><br><span class="line">    <span class="keyword">while</span> (i_start &lt;= i_end &amp;&amp; j_start &lt;= j_end)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i_start] &lt; arr[j_start])</span><br><span class="line">        &#123;</span><br><span class="line">            temp[length] = arr[i_start];</span><br><span class="line">            length++;</span><br><span class="line">            i_start++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            temp[length] = arr[j_start];</span><br><span class="line">            length++;</span><br><span class="line">            j_start++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将两区间剩余元素添加到辅助空间</span></span><br><span class="line">    <span class="keyword">while</span> (i_start &lt;= i_end)</span><br><span class="line">    &#123;</span><br><span class="line">        temp[length] = arr[i_start];</span><br><span class="line">        i_start++;</span><br><span class="line">        length++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (j_start &lt;= j_end)</span><br><span class="line">    &#123;</span><br><span class="line">        temp[length] = arr[j_start];</span><br><span class="line">        j_start++;</span><br><span class="line">        length++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//辅助空间中的内容覆盖原序列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; length; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        arr[start + i] = temp[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">MergingSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> start, <span class="type">int</span> end, <span class="type">int</span> temp[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//首先进行分组</span></span><br><span class="line">    <span class="keyword">if</span> (start &gt;= end)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mid = (start + end) / <span class="number">2</span>;</span><br><span class="line">    <span class="comment">//序列分两部分</span></span><br><span class="line">    <span class="built_in">MergingSort</span>(arr, start, mid, temp);</span><br><span class="line">    <span class="built_in">MergingSort</span>(arr, mid + <span class="number">1</span>, end, temp);</span><br><span class="line">    <span class="built_in">Merge</span>(arr, start, end, mid, temp);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    <span class="type">int</span> len = <span class="built_in">sizeof</span>(arr) / <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">    <span class="type">int</span> temp[len];<span class="comment">//开辟一个辅助空间</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;排序之前：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">Print</span>(arr, len);</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;排序之后：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">MergingSort</span>(arr, <span class="number">0</span>, len - <span class="number">1</span>, temp);</span><br><span class="line">    <span class="built_in">Print</span>(arr, len);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="7-堆排序"><a href="#7-堆排序" class="headerlink" title="7. 堆排序"></a>7. 堆排序</h2><h4 id="在介绍堆排序之前，我们先来看一下堆的概念。"><a href="#在介绍堆排序之前，我们先来看一下堆的概念。" class="headerlink" title="在介绍堆排序之前，我们先来看一下堆的概念。"></a>在介绍堆排序之前，我们先来看一下堆的概念。</h4><blockquote>
-<p>堆（Heap)是计算机科学中一类特殊的数据结构的统称。堆通常是一个可以被看做一棵树的数组对象。堆总是满足下列性质：</p>
-<ul>
-<li>堆中某个节点的值总是不大于或不小于其父节点的值；</li>
-<li>堆总是一个<strong>完全二叉树</strong>。</li>
-</ul>
-<p>其中，把堆中每个结点的值都大于或等于其左右两个子结点的值的堆称为大根堆；反之为小根堆。</p>
-</blockquote>
-<h6 id="大根堆图示"><a href="#大根堆图示" class="headerlink" title="大根堆图示"></a>大根堆图示</h6><p><img src="https://img-blog.csdnimg.cn/20200722094031994.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h6 id="小根堆图示"><a href="#小根堆图示" class="headerlink" title="小根堆图示"></a>小根堆图示</h6><p><img src="https://img-blog.csdnimg.cn/20200722094048799.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h6 id="堆排序（Heap-Sort）就是利用堆进行排序的方法（因为我们要进行从小到大排序，所以利用大顶堆进行排序。）首先将待排序的序列构建为一个大顶堆，此时根结点就是值最大的元素，将该元素移到末尾，将剩余的-n-1-个序列再重新构建为一个大顶堆，再将该序列的给结点元素移到该-n-1-个元素的堆的末尾，以此类推，便可以得到一个有序序列。"><a href="#堆排序（Heap-Sort）就是利用堆进行排序的方法（因为我们要进行从小到大排序，所以利用大顶堆进行排序。）首先将待排序的序列构建为一个大顶堆，此时根结点就是值最大的元素，将该元素移到末尾，将剩余的-n-1-个序列再重新构建为一个大顶堆，再将该序列的给结点元素移到该-n-1-个元素的堆的末尾，以此类推，便可以得到一个有序序列。" class="headerlink" title="堆排序（Heap Sort）就是利用堆进行排序的方法（因为我们要进行从小到大排序，所以利用大顶堆进行排序。）首先将待排序的序列构建为一个大顶堆，此时根结点就是值最大的元素，将该元素移到末尾，将剩余的 n - 1 个序列再重新构建为一个大顶堆，再将该序列的给结点元素移到该 n - 1 个元素的堆的末尾，以此类推，便可以得到一个有序序列。"></a>堆排序（Heap Sort）就是利用堆进行排序的方法（因为我们要进行从小到大排序，所以利用大顶堆进行排序。）首先将待排序的序列构建为一个大顶堆，此时根结点就是值最大的元素，将该元素移到末尾，将剩余的 n - 1 个序列再重新构建为一个大顶堆，再将该序列的给结点元素移到该 n - 1 个元素的堆的末尾，以此类推，便可以得到一个有序序列。</h6><h4 id="建堆过程图示"><a href="#建堆过程图示" class="headerlink" title="建堆过程图示"></a>建堆过程图示</h4><p><img src="https://img-blog.csdnimg.cn/20200722093831729.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200722093843968.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="排序图示-6"><a href="#排序图示-6" class="headerlink" title="排序图示"></a>排序图示</h4><p><img src="https://img-blog.csdnimg.cn/20200722093920203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020072209393017.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzM1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h4 id="代码实现-6"><a href="#代码实现-6" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Print</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">HeapAdjust</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> index, <span class="type">int</span> len)</span><span class="comment">//index代表待调整的结点下标</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> max = index;</span><br><span class="line">    <span class="type">int</span> lchild = index * <span class="number">2</span> + <span class="number">1</span>;<span class="comment">//左子结点下标</span></span><br><span class="line">    <span class="type">int</span> rchild = index * <span class="number">2</span> + <span class="number">2</span>;<span class="comment">//右子结点下标</span></span><br><span class="line">    <span class="keyword">if</span> (lchild &lt; len &amp;&amp; arr[lchild] &gt; arr[max])</span><br><span class="line">    &#123;</span><br><span class="line">        max = lchild;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (rchild &lt; len &amp;&amp; arr[rchild] &gt; arr[max])</span><br><span class="line">    &#123;</span><br><span class="line">        max = rchild;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (max != index)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">swap</span>(arr[index], arr[max]);</span><br><span class="line">        <span class="built_in">HeapAdjust</span>(arr, max, len);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">HeapSort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//初始化为大顶堆</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = len / <span class="number">2</span> - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">HeapAdjust</span>(arr, i, len);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = len - <span class="number">1</span>; j &gt;= <span class="number">0</span>; --j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">swap</span>(arr[<span class="number">0</span>], arr[j]);</span><br><span class="line">        <span class="built_in">HeapAdjust</span>(arr, <span class="number">0</span>, j);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    <span class="type">int</span> len = <span class="built_in">sizeof</span>(arr) / <span class="built_in">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">    <span class="type">int</span> temp[len];<span class="comment">//开辟一个辅助空间</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;排序之前：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">Print</span>(arr, len);</span><br><span class="line">    <span class="built_in">HeapSort</span>(arr, len);</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;排序之后：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">Print</span>(arr, len);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h4 id="总结以上几种算法的时间、空间复杂度"><a href="#总结以上几种算法的时间、空间复杂度" class="headerlink" title="总结以上几种算法的时间、空间复杂度"></a>总结以上几种算法的时间、空间复杂度</h4><table>
-<thead>
-<tr>
-<th align="center">算法</th>
-<th align="center">时间复杂度</th>
-<th align="center">空间复杂度</th>
-<th align="center">稳定性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">冒泡排序</td>
-<td align="center">O(n<sup>2)</td>
-<td align="center">O(1)</td>
-<td align="center">不稳定</td>
-</tr>
-<tr>
-<td align="center">选择排序</td>
-<td align="center">O(n<sup>2)</td>
-<td align="center">O(1)</td>
-<td align="center">数组：不稳定 &#x2F; 链表：稳定</td>
-</tr>
-<tr>
-<td align="center">快速排序</td>
-<td align="center">O(nlog2n)</td>
-<td align="center">O(log2n)</td>
-<td align="center">不稳定</td>
-</tr>
-<tr>
-<td align="center">插入排序</td>
-<td align="center">O(n<sup>2)</td>
-<td align="center">O(1)</td>
-<td align="center">稳定</td>
-</tr>
-<tr>
-<td align="center">希尔排序</td>
-<td align="center">O(n<sup>1.5)</td>
-<td align="center">O(1)</td>
-<td align="center">不稳定</td>
-</tr>
-<tr>
-<td align="center">归并排序</td>
-<td align="center">O(nlog2n)</td>
-<td align="center">O(n)</td>
-<td align="center">稳定</td>
-</tr>
-<tr>
-<td align="center">堆排序</td>
-<td align="center">O(nlog2n)</td>
-<td align="center">O(1)</td>
-<td align="center">不稳定</td>
-</tr>
-</tbody></table>
+More info: Writing
+Run server1$ hexo server
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/10/%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-md/" data-id="cl1t0wdr1000064yv469mfx7x" data-title="几种排序算法的C语言实现.md" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+More info: Server
+Generate static files1$ hexo generate
 
+More info: Generating
+Deploy to remote sites1$ hexo deploy
 
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/04/10/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-04-10T07:42:04.056Z" itemprop="datePublished">2022-04-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/04/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/10/hello-world/" data-id="cl1t0lh2l00003gyv3tckdn1p" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/04/10/%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-md/">几种排序算法的C语言实现.md</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/10/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/10/%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-md/" title="几种排序算法的C语言实现.md"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="几种排序算法的C语言实现.md"/></a><div class="content"><a class="title" href="/2022/04/10/%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0-md/" title="几种排序算法的C语言实现.md">几种排序算法的C语言实现.md</a><time datetime="2022-04-10T08:26:18.000Z" title="Created 2022-04-10 16:26:18">2022-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/10/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/04/10/hello-world/" title="Hello World">Hello World</a><time datetime="2022-04-10T07:42:04.056Z" title="Created 2022-04-10 15:42:04">2022-04-10</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">April 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-04-10T10:34:18.625Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
